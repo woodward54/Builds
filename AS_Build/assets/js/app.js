@@ -28,7 +28,7 @@ firebase.auth().onAuthStateChanged(firebaseuser => {
   if (firebaseuser){
     console.log(firebaseuser);
     console.log("Logged In");
-    window.open("{{ site.url }}/projects/","_self");
+    window.open("http://aeriumsolution.com/projects/","_self");
 } else {
     console.log("Not Logged In");
   }
