@@ -20,16 +20,16 @@ const pass = txtPass.value;
 const auth = firebase.auth();
 //Sign in
 const promise = auth.signInWithEmailAndPassword(email,pass);
-promise.catch(e => consle.log(e.message));
+promise.catch(e => console.log(e.message));
 });
 //Add a realtime auth listener
 
 firebase.auth().onAuthStateChanged(firebaseuser => {
   if (firebaseuser){
-    consle.log(firebaseuser);
-    consle.log("Logged In");
+    console.log(firebaseuser);
+    console.log("Logged In");
     window.open("{{ site.url }}/projects/","_self");
 } else {
-    consle.log("Not Logged In");
+    console.log("Not Logged In");
   }
 });
