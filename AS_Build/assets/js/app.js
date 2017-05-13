@@ -21,7 +21,7 @@ const auth = firebase.auth();
 //Sign in
 const promise = auth.signInWithEmailAndPassword(email,pass);
 promise.catch(e => console.log(e.message));
-promise.then(window.open("http://aeriumsolution.com/projects/","_self");
+promise.then(window.open("http://aeriumsolution.com/projects/","_self"));
 });
 //Add a realtime auth listener
 
