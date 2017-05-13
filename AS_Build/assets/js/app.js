@@ -13,7 +13,7 @@ const txtEmail = document.getElementById('txtEmail');
 const txtPassword = document.getElementById('txtPassword');
 const btnLogin = document.getElementById('btnLogin');
 
-btnLogin.addEventListener('click', e>= {
+btnLogin.addEventListener('click', e => {
 // Get email and password
 const email = txtEmail.value;
 const pass = txtPass.value;
