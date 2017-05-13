@@ -21,6 +21,7 @@ const auth = firebase.auth();
 //Sign in
 const promise = auth.signInWithEmailAndPassword(email,pass);
 promise.catch(e => consle.log(e.message));
+});
 //Add a realtime auth listener
 
 firebase.auth().onAuthStateChanged(firebaseuser => {
@@ -28,12 +29,7 @@ firebase.auth().onAuthStateChanged(firebaseuser => {
     consle.log(firebaseuser);
     consle.log("Logged In");
     window.open("{{ site.url }}/projects/","_self");
-  } else {
+} else {
     consle.log("Not Logged In");
   }
-
-})
-
-
-
-})
+});
