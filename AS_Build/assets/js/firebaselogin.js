@@ -13,19 +13,19 @@ const auth = firebase.auth();
 //Sign in
 const promise = auth.signInWithEmailAndPassword(email,pass);
 promise.catch(e => console.log(e.message));
-promise.then(window.open("http://aeriumsolution.com/projects/","_self"));
+//promise.then(window.open("http://aeriumsolution.com/projects/","_self"));
 });
 //Add a realtime auth listener
 
-firebase.auth().onAuthStateChanged(firebaseuser => {
-  if (firebaseuser){
-    console.log(firebaseuser + "Logged In");
+firebase.auth().onAuthStateChanged(firebaseUser => {
+  if (firebaseUser){
+    console.log(firebaseUser + "Logged In");
+
 } else {
     console.log("Not Logged In");
   }
 });
 
 btnLogout.addEventListener('click', e => {
-  console.log(firebaseuser + "Logged Out");
   firebase.auth().signOut();
 });
