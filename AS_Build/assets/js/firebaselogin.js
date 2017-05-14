@@ -19,13 +19,13 @@ promise.then(window.open("http://aeriumsolution.com/projects/","_self"));
 
 firebase.auth().onAuthStateChanged(firebaseuser => {
   if (firebaseuser){
-    console.log(firebaseuser);
-    console.log("Logged In");
+    console.log(firebaseuser + "Logged In");
 } else {
     console.log("Not Logged In");
   }
 });
 
 btnLogout.addEventListener('click', e => {
+  console.log(firebaseuser + "Logged Out");
   firebase.auth().signOut();
 });
