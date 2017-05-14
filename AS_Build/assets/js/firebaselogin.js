@@ -13,7 +13,9 @@ const auth = firebase.auth();
 //Sign in
 const promise = auth.signInWithEmailAndPassword(email,pass);
 promise.catch(e => console.log(e.message));
-if (firebaseUser){window.open("http://aeriumsolution.com/projects/","_self");}
+var authData = firebase.getAuth();
+if (authData) {
+  window.open("http://aeriumsolution.com/projects/","_self");}
 else {alert("Wrong username or password!");}
 });
 //Add a realtime auth listener
