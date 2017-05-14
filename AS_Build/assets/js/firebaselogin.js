@@ -1,0 +1,31 @@
+
+//Get elements
+const txtEmail = document.getElementById('txtEmail');
+const txtPassword = document.getElementById('txtPassword');
+const btnLogin = document.getElementById('btnLogin');
+const btnLogout = document.getElementById('btnLogout');
+
+btnLogin.addEventListener('click', e => {
+// Get email and password
+const email = txtEmail.value;
+const pass = txtPassword.value;
+const auth = firebase.auth();
+//Sign in
+const promise = auth.signInWithEmailAndPassword(email,pass);
+promise.catch(e => console.log(e.message));
+promise.then(window.open("http://aeriumsolution.com/projects/","_self"));
+});
+//Add a realtime auth listener
+
+firebase.auth().onAuthStateChanged(firebaseuser => {
+  if (firebaseuser){
+    console.log(firebaseuser);
+    console.log("Logged In");
+} else {
+    console.log("Not Logged In");
+  }
+});
+
+btnLogout.addEventListener('click', e => {
+  firebase.auth().signOut();
+});
