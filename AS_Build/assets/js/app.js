@@ -12,6 +12,7 @@ firebase.initializeApp(config);
 const txtEmail = document.getElementById('txtEmail');
 const txtPassword = document.getElementById('txtPassword');
 const btnLogin = document.getElementById('btnLogin');
+const btnLogout = document.getElementbyId('btnLogout');
 
 btnLogin.addEventListener('click', e => {
 // Get email and password
@@ -32,4 +33,8 @@ firebase.auth().onAuthStateChanged(firebaseuser => {
 } else {
     console.log("Not Logged In");
   }
+});
+
+btnLogout.addEventListener('click', e => {
+  firebase.auth().signOut();
 });
