@@ -12,7 +12,7 @@ firebase.initializeApp(config);
 const txtEmail = document.getElementById('txtEmail');
 const txtPassword = document.getElementById('txtPassword');
 const btnLogin = document.getElementById('btnLogin');
-const btnLogout = document.getElementbyId('btnLogout');
+const btnLogout = document.getElementById('btnLogout');
 
 btnLogin.addEventListener('click', e => {
 // Get email and password
