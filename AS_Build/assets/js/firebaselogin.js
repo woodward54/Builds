@@ -30,4 +30,5 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
 btnLogout.addEventListener('click', e => {
   firebase.auth().signOut();
+  window.open("http://aeriumsolution.com/","_self");
 });
