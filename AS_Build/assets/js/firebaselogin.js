@@ -14,7 +14,7 @@ const auth = firebase.auth();
 const promise = auth.signInWithEmailAndPassword(email,pass);
 promise.catch(e => console.log(e.message));
 firebase.auth().onAuthStateChanged(firebaseUser => {
-      if (firebaseUser){window.open("http://aeriumsolution.com/firebaseUser/","_self");
+      if (firebaseUser){window.open("_layouts/firebaseUser.html","_self");
     } else {alert("Wrong username or password!");}
 });
 });
@@ -23,6 +23,8 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if (firebaseUser){
     console.log(firebaseUser + " Logged In");
+    var userid = user.displayName;
+    document.getElementById("user").innerHTML = userid;
 } else {
     console.log("Logged out");
   }
