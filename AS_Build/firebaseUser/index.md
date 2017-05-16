@@ -1,5 +1,5 @@
  ---
-layout: firebaseUser
+layout: post-list
 title: USERS's Data
 excerpt: "A List of Projects"
 comments: false
