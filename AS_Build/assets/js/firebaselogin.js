@@ -23,7 +23,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if (firebaseUser){
     console.log(firebaseUser + " Logged In");
-    var userid = user.displayName;
+    var userid = firebaseUser.displayName;
     document.getElementById("user").innerHTML = userid;
 } else {
     console.log("Logged out");
