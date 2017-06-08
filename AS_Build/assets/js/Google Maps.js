@@ -102,9 +102,15 @@ function initMap()
             center: { lat: blipList[0].Lat, lng: blipList[0].Long },
             zoom: 16
         });
+<<<<<<< HEAD
 	if(typeof blipList[0] == "undefined")
 	{
 		setTimeout("location.reload(true);", 0005);
+=======
+	if(blipList[0] === undefined)
+	{
+		setTimeout("location.reload(true);",0005);
+>>>>>>> ce492ebf3b68018c598db7b28abe92535e9f4b11
 	}
         // Function that assigns the same info window to each marker node, this allows there to only be one info window on the screen at a time
 
