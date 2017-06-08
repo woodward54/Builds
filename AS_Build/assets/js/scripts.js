@@ -1,8 +1,13 @@
 $(function() {
  var currenturl = window.location.href;
- var endurl="http://aeriumsolutions.com/";  
-    if(currenturl == endurl) {}
-    else window.location.href= endurl;
+ var endurl="http://aeriumsolutions.com/";
+    var middleground="http://aeriumsolution.com/";
+    var modeground="http://www.aeriumsolution.com/";
+    var madeground="http://www.aeriumsolutions.com/";
+    if(currenturl == middleground) {window.location.href=endurl;}
+    if(currenturl == modeground){window.location.href=endurl;}
+    if(currenturl == madeground){window.location.href=endurl;}
+    else {}
 });
 
 
