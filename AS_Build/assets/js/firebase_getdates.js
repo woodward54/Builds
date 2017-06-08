@@ -39,11 +39,11 @@ firebase.auth().onAuthStateChanged(user => {
 =======
 */
 
-	  for(int i =0; i < childKey.length; i++)
+	  for(var i =0; i < childKey.length; i++)
 	  {
 
           	console.log("Flight Number: " + flight);
-         	  var para = document.createElement("P");
+        	  var para = document.createElement("P");
           	var indent = document.createTextNode("  TEST  ");
           	var p = document.createElement("input");
           	p.type = "checkbox";
