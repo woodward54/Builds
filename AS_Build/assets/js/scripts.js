@@ -1,9 +1,10 @@
-$(function() {
+function() {
  var currenturl = window.location.href;
- var endurl="http://aeriumsolutions.com/";  
-    if(currenturl == endurl) {}
-    else window.location.href= endurl;
-});
+ var endurl="http://aeriumsolutions.com/";
+    var middleground="http://aeriumsolution.com/";
+    if(currenturl == middleground) {window.location.href= endurl;}
+    else {}
+};
 
 
 // dl-menu options
