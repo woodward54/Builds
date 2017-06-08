@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 $(function() {
  var currenturl = window.location.href;
  var endurl="http://aeriumsolutions.com/";  
     if(currenturl == endurl) {}
     else window.location.href= endurl;
 });
-=======
-function() {
- var currenturl = window.location.href;
- var endurl="http://aeriumsolutions.com/";
-    var middleground="http://aeriumsolution.com/";
-    if(currenturl == middleground) {window.location.href= endurl;}
-    else {}
-};
->>>>>>> ce492ebf3b68018c598db7b28abe92535e9f4b11
 
 
 // dl-menu options
