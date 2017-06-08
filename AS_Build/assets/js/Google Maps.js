@@ -102,7 +102,7 @@ function initMap()
             center: { lat: blipList[0].Lat, lng: blipList[0].Long },
             zoom: 16
         });
-	if(typeof blipList[0] == "undefined")
+	if(typeof blipList[0] ===  "undefined")
 	{
 		setTimeout("location.reload(true);", 0005);
 	}

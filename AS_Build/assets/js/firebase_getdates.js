@@ -2,11 +2,61 @@ firebase.auth().onAuthStateChanged(user => {
     if (user != null) {
       var name = user.displayName
       const dbRefObject = firebase.database().ref().child(name);
+
       dbRefObject.once('value', function(snapshot){
         snapshot.forEach(function(childSnapshot){
           var childKey = childSnapshot.key;
-          console.log("Dates Loaded: " + childKey);
 
+          console.log("Dates Loaded: " + childKey);
+          var i = document.createElement("input");
+          i.type = "checkbox";
+          i.value = childKey;
+          var text = document.createTextNode(" " + childKey);
+          var br = document.createElement('br');
+          document.getElementById('dates').appendChild(i);
+          document.getElementById('dates').appendChild(text);
+          document.getElementById('dates').appendChild(br);
+
+      /*    const dbRefObject2 = firebase.database().ref().child(name).child(childKey);
+          dbRefObject2.once('value', function(snapshot){
+            snapshot.forEach(function(childSnapshot2){
+              var flight = childSnapshot2.key;
+<<<<<<< HEAD
+
+
+
+          console.log("Flight Number: " + flight);
+          var p = document.createElement("input");
+          p.type = "checkbox";
+          p.value = childKey;
+          p.Id = box;
+          var text = document.createTextNode(" " + flight);
+          var br = document.createElement('br');
+          document.getElementById('dates').appendChild(p);
+          document.getElementById('dates').appendChild(text);
+          document.getElementById('dates').appendChild(br);
+          //document.getElementById('box').appendChild(style);
+=======
+*/
+
+	  for(int i =0; i < childKey.length; i++)
+	  {
+
+          	console.log("Flight Number: " + flight);
+         	  var para = document.createElement("P");
+          	var indent = document.createTextNode("  TEST  ");
+          	var p = document.createElement("input");
+          	p.type = "checkbox";
+          	p.value = childKey;
+          	var text = document.createTextNode(" " + flight);
+          	var br = document.createElement('br');
+          	document.getElementById('dates').appendChild(para);
+          	document.getElementById('dates').appendChild(indent);
+          	document.getElementById('dates').appendChild(p);
+          	document.getElementById('dates').appendChild(text);
+        }
+
+	 //document.getElementById('dates').appendChild(br);
 
           /*var div = document.createElement("div");
           var i = document.createElement("input");
@@ -17,14 +67,8 @@ firebase.auth().onAuthStateChanged(user => {
           div.appendChild(text);
           $(".dates").append(div);*/
 
-          var i = document.createElement("input");
-          i.type = "checkbox";
-          i.value = childKey;
-          var text = document.createTextNode(" " + childKey);
-          var br = document.createElement('br');
-          document.getElementById('dates').appendChild(i);
-          document.getElementById('dates').appendChild(text);
-          document.getElementById('dates').appendChild(br);
+//            });
+  //        });
         });
       });
   }
