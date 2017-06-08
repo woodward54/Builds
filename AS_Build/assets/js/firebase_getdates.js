@@ -21,36 +21,19 @@ firebase.auth().onAuthStateChanged(user => {
           dbRefObject2.once('value', function(snapshot){
             snapshot.forEach(function(childSnapshot2){
               var flight = childSnapshot2.key;
-<<<<<<< HEAD
-
-
-
-          console.log("Flight Number: " + flight);
-          var p = document.createElement("input");
-          p.type = "checkbox";
-          p.value = childKey;
-          p.Id = box;
-          var text = document.createTextNode(" " + flight);
-          var br = document.createElement('br');
-          document.getElementById('dates').appendChild(p);
-          document.getElementById('dates').appendChild(text);
-          document.getElementById('dates').appendChild(br);
-          //document.getElementById('box').appendChild(style);
-=======
 */
 
-	  for(int i =0; i < childKey.length; i++)
+	  for(var i =0; i < childKey.length; i++)
 	  {
-            var flightnum = "Flight " + (i+1);
-            system.val()[childKey].flightnum;
-          	console.log("Flight Number: " + (i+1));
-
-         	  var para = document.createElement("P");
+	        var flightNum = "Flight " + (i + 1);
+            snapshot.val()[childKey].flightNum;
+        	var para = document.createElement("P");
           	var indent = document.createTextNode("  TEST  ");
           	var p = document.createElement("input");
           	p.type = "checkbox";
           	p.value = childKey;
-          	var text = document.createTextNode(" " + (i+1));
+
+          	var text = document.createTextNode(" " + i+1);
           	var br = document.createElement('br');
           	document.getElementById('dates').appendChild(para);
           	document.getElementById('dates').appendChild(indent);
