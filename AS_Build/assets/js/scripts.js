@@ -1,3 +1,11 @@
+$(function() {
+ var currenturl = window.location.href;
+ var endurl="http://aeriumsolutions.com/";  
+    if(currenturl == endurl) {}
+    else window.location.href= endurl;
+});
+
+
 // dl-menu options
 $(function() {
   $( '#dl-menu' ).dlmenu({
